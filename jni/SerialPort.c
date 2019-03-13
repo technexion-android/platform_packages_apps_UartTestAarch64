@@ -83,9 +83,9 @@ JNIEXPORT jobject JNICALL Java_android_1serialport_1api_SerialPort_open
 	/* Check arguments */
 	{
 		speed = getBaudrate(baudrate);
-		if (speed == -1) {
+		if (speed < 9600) {
 			/* TODO: throw an exception */
-			LOGE("Invalid baudrate");
+			LOGE("Invalid baudrate: %p", thiz);
 			return NULL;
 		}
 	}
