@@ -19,6 +19,8 @@ LOCAL_REQUIRED_MODULES := serialport
 
 LOCAL_AAPT_FLAGS += -c zz_ZZ
 
+LOCAL_SDK_VERSION := current
+
 include $(BUILD_PACKAGE)
 
 include $(call all-makefiles-under, jni)
