@@ -82,7 +82,7 @@ public class SerialPort {
 	public native void close();
 	static {
         try {
-            System.load("/system/lib64/serialport.so");
+            System.load("/system/lib/serialport.so");
         } catch (UnsatisfiedLinkError e) {
             Log.e(TAG, "serialport load Failed!!");
         }
